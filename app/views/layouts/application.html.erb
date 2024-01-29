@@ -20,13 +20,12 @@
       </div>
       <% end %>
 
-      <div class="search-new-list-button d-flex">
-        <p class="">Search</p>
+      <div class="search-new-list-button d-flex align-items-center">
+        <p class="text-primary">Search</p>
         <%= link_to 'New List', new_list_path, class: 'text-decoration-none mx-2' %>
       </div>
     </div>
-    <div class="container py-3">
-      <%= yield %>
-    </div>
+    <%= yield %>
+
   </body>
 </html>
