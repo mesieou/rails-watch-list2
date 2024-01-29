@@ -7,6 +7,5 @@
   <%= bookmark.movie.overview %>
   <%= image_tag bookmark.movie.poster_url, alt: "text" %>
   <%= bookmark.movie.rating %>
+  <%= link_to 'Delete', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 <% end %>
-
-<%= link_to 'Delete', list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
