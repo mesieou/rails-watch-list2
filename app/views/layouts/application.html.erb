@@ -11,6 +11,16 @@
   </head>
 
   <body>
+    <div class="navbar-lewagon d-flex justify-content-between align-items-center border-bottom">
+
+      <%= link_to lists_path do %>
+      <div class="lists-link d-flex align-items-center">
+        <i class="fa-solid fa-video fa-xl"></i>
+        <h2 class="mx-2">All Movies</h2>
+      </div>
+      <% end %>
+      <p class="">Search</p>
+    </div>
     <%= yield %>
   </body>
 </html>
