@@ -1,11 +1,22 @@
-<h1><%= @list.name %></h1>
+<div class="banner background-image-faded text-white shadow" >
+ <h1><%= @list.name %></h1>
+</div>
 
-
-<% @list.bookmarks.each do |bookmark| %>
-  <%=  bookmark.comment %>
-  <%= bookmark.movie.title %>
-  <%= bookmark.movie.overview %>
-  <%= image_tag bookmark.movie.poster_url, alt: "text" %>
-  <%= bookmark.movie.rating %>
-  <%= link_to 'Delete', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-<% end %>
+<div class="container my-3 bookmarks">
+  <% @list.bookmarks.each do |bookmark| %>
+    <div class="bookmark-card">
+      <div class="bookmark-details">
+        <%= image_tag bookmark.movie.poster_url, alt: "text" %>
+        <div class="bookmark-title-and-rating d-flex">
+          <%= bookmark.movie.title %>
+          <%= bookmark.movie.rating %>
+        </div>
+        <%= bookmark.movie.overview %>
+        <div class="comment-and-delete-button d-flex space-between align-items-baseline">
+          <%=  bookmark.comment %>
+          <%= link_to 'Delete', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
