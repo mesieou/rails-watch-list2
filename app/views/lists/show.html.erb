@@ -2,7 +2,8 @@
  <h1><%= @list.name %></h1>
 </div>
 
-<div class="container my-3">
+<%# movies section %>
+<div class="container my-3 pb-5 border-bottom">
   <div class="d-flex justify-content-between align-items-center">
     <h1>Movies (<%= @list.bookmarks.length %>)</h1>
     <%# <%= link_to 'Add a movie', new_list_bookmark_path(@list), class: 'btn btn-primary' %>
@@ -41,4 +42,25 @@
       <% end %>
     </div>
   </div>
+</div>
+
+<%# reviews section %>
+<div class="container my-3">
+  <h1>Reviews</h1>
+  <div class="reviews w-50">
+    <% @list.reviews.each do |review| %>
+      <div class="review py-3 border-bottom">
+        <p><%= '⭐️' * review.rating%></p>
+        <p> <%= review.comment %></p>
+      </div>
+    <% end %>
+  </div>
+  <h2>Add your review</h2>
+  <%= simple_form_for [@list, @review] do |f| %>
+    <%= f.input :comment, placeholder: 'Add your review here' %>
+    <%= f.input :rating, collection: [1, 2, 3, 4, 5] %>
+    <%= f.submit %>
+  <% end %>
+
+
 </div>

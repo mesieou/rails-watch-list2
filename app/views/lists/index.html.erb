@@ -10,7 +10,7 @@
     <h1>My Lists</h1>
     <%= link_to '➕ Add List', new_list_path, class: 'text-decoration-none mx-2' %>
   </div>
-  <div class="cards">
+  <div class="lists">
     <% @lists.each do |list| %>
       <%= link_to list_path(list) do  %>
         <div class="list-card">
