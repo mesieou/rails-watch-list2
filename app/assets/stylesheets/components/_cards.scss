@@ -6,7 +6,7 @@
 
 .bookmarks {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px
 }
 
@@ -14,8 +14,9 @@
   .cards {
     grid-template-columns: 1fr 1fr;
   }
+
   .bookmarks {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -43,11 +44,11 @@
 }
 
 .bookmark-card {
-  width: 400px;
+  width: 460px;
 }
 .bookmark-card .image {
-  width: 400px;
-  height: 250px;
+  width: 460px;
+  height: 200px;
   background-position: 30px -100px;
 }
 

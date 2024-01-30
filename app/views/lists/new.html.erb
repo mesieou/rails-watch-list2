@@ -1,7 +1,10 @@
-<div class="container w-50">
+<div class="container w-50 py-3 border-bottom">
   <h1>New List</h1>
   <%= simple_form_for @list do |f| %>
     <%= f.input :name, placeholder: 'Classic Movies' %>
     <%= f.submit class: 'btn btn-outline-primary'%>
   <% end %>
+</div>
+<div class="container w-50 py-2">
+  <%= link_to "👈🏽 Go back Home", lists_path, class: 'text-decoration-none'  %>
 </div>
