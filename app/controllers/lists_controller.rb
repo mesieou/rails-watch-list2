@@ -1,6 +1,10 @@
 class ListsController < ApplicationController
   def index
-    @lists = List.all
+    if params[:search].present?
+      @lists = List.where('lower(name) LIKE ?', "%#{params[:search].downcase}%")
+    else
+      @lists = List.all
+    end
   end
 
   def show
