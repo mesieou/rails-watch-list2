@@ -45,12 +45,13 @@
 
 .bookmark-card {
   width: 460px;
+  .image {
+    width: 460px;
+    height: 200px;
+    background-position: 30px -100px;
+  }
 }
-.bookmark-card .image {
-  width: 460px;
-  height: 200px;
-  background-position: 30px -100px;
-}
+
 
 .bookmark-details p {
   font-size: 12px;
