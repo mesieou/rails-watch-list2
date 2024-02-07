@@ -2,6 +2,7 @@
   <h1>New List</h1>
   <%= simple_form_for @list do |f| %>
     <%= f.input :name, placeholder: 'Classic Movies' %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit class: 'btn btn-outline-primary'%>
   <% end %>
 </div>
