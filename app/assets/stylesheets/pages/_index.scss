@@ -10,5 +10,7 @@ h1 {
 }
 
 .background-image-faded {
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(https://compote.slate.com/images/721112a8-1fa9-4a48-8eeb-0c4f29e0d8f6.jpeg?crop=1554%2C1036%2Cx2%2Cy0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
